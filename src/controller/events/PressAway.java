@@ -4,7 +4,7 @@ public class PressAway extends SystemEvent {
 	private static PressAway instance;
 
 	/**
-	 * Private for singleton
+	 * Private constructor for singleton
 	 * 
 	 */
 	private PressAway() {
