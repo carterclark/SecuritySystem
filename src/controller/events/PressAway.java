@@ -1,5 +1,25 @@
 package controller.events;
 
-public class PressAway {
+public class PressAway extends SystemEvent {
+	private static PressAway instance;
 
+	/**
+	 * Private for singleton
+	 * 
+	 */
+	private PressAway() {
+
+	}
+
+	/**
+	 * For the singleton pattern
+	 * 
+	 * @return the only instance
+	 */
+	public static PressAway instance() {
+		if (instance == null) {
+			instance = new PressAway();
+		}
+		return instance;
+	}
 }
