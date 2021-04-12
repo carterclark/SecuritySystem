@@ -1,6 +1,6 @@
 package states;
 
-public class ArmedStay extends SecurityState {
+public class Countdown extends SecurityState {
 
 	@Override
 	public void enter() {
