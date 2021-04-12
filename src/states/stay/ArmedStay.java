@@ -15,5 +15,4 @@ public class ArmedStay extends SecurityState {
 		// TODO Auto-generated method stub
 
 	}
-
 }
