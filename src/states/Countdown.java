@@ -14,4 +14,7 @@ public class Countdown extends SecurityState {
 
 	}
 
+	public void context() {
+		System.out.println("Display counter: ");
+	}
 }
