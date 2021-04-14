@@ -31,6 +31,5 @@ public class NotReady extends SecurityState implements Notifiable {
 
 	@Override
 	public void leave() {
-		SecurityContext.instance().showReady();
 	}
 }
