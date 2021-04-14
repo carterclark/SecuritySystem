@@ -66,7 +66,6 @@ public class CountdownToAwayNotReady extends Countdown {
 	public void leave() {
 
 		super.leave();
-		SecurityContext.instance().showNotReady();
 	}
 
 }
