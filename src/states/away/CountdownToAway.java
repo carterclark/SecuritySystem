@@ -64,6 +64,5 @@ public class CountdownToAway extends Countdown {
 	public void leave() {
 
 		super.leave();
-		SecurityContext.instance().showAway();
 	}
 }
