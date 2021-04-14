@@ -47,6 +47,5 @@ public class Ready extends SecurityState implements Notifiable {
 
 	@Override
 	public void leave() {
-
 	}
 }
