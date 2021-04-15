@@ -29,8 +29,8 @@ public class Countdown extends SecurityState implements Notifiable {
 		timer = new Timer(this, 10);
 	}
 
-	public void setTimer(Timer timer) {
-		this.timer = new Timer(this, timer.getTimeValue());
+	public void setTimer(int timer) {
+		this.timer = new Timer(this, timer);
 	}
 
 	public int getTimeValue() {
