@@ -22,8 +22,7 @@ import zones.Zone;
  * @author Ben Hines, Carter Clark, Chris Lara-Batencourt, Pavel Danek, Ricky
  *         Nguyen
  * 
- *         Code adapted from Brahma Dathan and Sarnath Ramnath
- * @Copyright (c) 2010
+ * @Copyright (c) 2010 Code adapted from Brahma Dathan and Sarnath Ramnath
  */
 public class SecurityContext {
 	private static SecurityContext instance;
