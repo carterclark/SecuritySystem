@@ -3,6 +3,14 @@ package states;
 import timer.Notifiable;
 import timer.Timer;
 
+/**
+ * Represents the Countdown state that acts as a super clas to all countdown
+ * states
+ * 
+ * @author Ben Hines, Carter Clark, Chris Lara-Batencourt, Pavel Danek, Ricky
+ *         Nguyen
+ *
+ */
 public class Countdown extends SecurityState implements Notifiable {
 	private static Countdown instance;
 	protected Timer timer;
@@ -26,7 +34,7 @@ public class Countdown extends SecurityState implements Notifiable {
 	}
 
 	/**
-	 * Creates a new timer obect and assigns it to the current class 'timer'
+	 * Creates a new timer object and assigns it to the current class 'timer'
 	 * reference
 	 */
 	public void startTimer() {
@@ -34,7 +42,7 @@ public class Countdown extends SecurityState implements Notifiable {
 	}
 
 	/**
-	 * Creates a new timer obect with the same time value as the parameter 'timer'
+	 * Creates a new timer object with the same time value as the parameter 'timer'
 	 * object and assigns it to the current class 'timer' reference
 	 * 
 	 * @param timer of type Timer

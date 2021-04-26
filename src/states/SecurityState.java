@@ -13,8 +13,12 @@ import events.TimerTicked;
 import events.UncheckZone;
 
 /**
+ * Superclass to every state of the Security System.
  * 
- * @author Brahma Dathan and Sarnath Ramnath
+ * @author Ben Hines, Carter Clark, Chris Lara-Batencourt, Pavel Danek, Ricky
+ *         Nguyen
+ * 
+ *         Code adapted from Brahma Dathan and Sarnath Ramnath
  * @Copyright (c) 2010
  */
 
