@@ -6,6 +6,11 @@ import events.UncheckZone;
 import states.Countdown;
 import states.SecurityContext;
 
+/**
+ * Represents the Count down to Stay state of the Security System, while all
+ * zones are checked.
+ *
+ */
 public class CountdownToStayReady extends Countdown {
 	private static CountdownToStayReady instance;
 
@@ -32,7 +37,6 @@ public class CountdownToStayReady extends Countdown {
 	 */
 	@Override
 	public void handleEvent(TimerTicked event) {
-
 		SecurityContext.instance().showSecondsToStay(timer.getTimeValue());
 	}
 
@@ -50,20 +54,17 @@ public class CountdownToStayReady extends Countdown {
 	 */
 	@Override
 	public void handleEvent(UncheckZone event) {
-
 		CountdownToStayNotReady.instance().setTimer(timer);
 		SecurityContext.instance().changeState(CountdownToStayNotReady.instance());
 	}
 
 	@Override
 	public void enter() {
-
 		SecurityContext.instance().showSecondsToStay(timer.getTimeValue());
 	}
 
 	@Override
 	public void leave() {
-
 		super.leave();
 	}
 }

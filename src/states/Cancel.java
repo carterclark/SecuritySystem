@@ -1,11 +1,20 @@
 package states;
 
+import events.DigitPressed;
 import events.EnterPassword;
 import events.IncorrectPassword;
+import events.PressCancel;
 import events.UncheckZone;
 import states.breach.BreachNotReady;
 import states.breach.BreachReady;
 
+/**
+ * Represents the cancel state
+ * 
+ * @author Ben Hines, Carter Clark, Chris Lara-Batencourt, Pavel Danek, Ricky
+ *         Nguyen
+ *
+ */
 public class Cancel extends SecurityState {
 	private static Cancel instance;
 
@@ -20,6 +29,14 @@ public class Cancel extends SecurityState {
 			instance = new Cancel();
 		}
 		return instance;
+	}
+
+	/**
+	 * Processes a digit press
+	 */
+	@Override
+	public void handleEvent(DigitPressed event) {
+		SecurityContext.instance().showPassword();
 	}
 
 	/**
@@ -43,8 +60,18 @@ public class Cancel extends SecurityState {
 	 */
 	@Override
 	public void handleEvent(UncheckZone event) {
+		SecurityContext.instance().clearPassword();
 		SecurityContext.instance().changeState(BreachNotReady.instance());
 
+	}
+
+	/**
+	 * Processes cancel button press
+	 */
+	@Override
+	public void handleEvent(PressCancel event) {
+		SecurityContext.instance().clearPassword();
+		SecurityContext.instance().showCancel();
 	}
 
 	@Override
@@ -55,7 +82,6 @@ public class Cancel extends SecurityState {
 
 	@Override
 	public void leave() {
-		// TODO Auto-generated method stub
 
 	}
 

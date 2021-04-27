@@ -7,6 +7,10 @@ import states.SecurityContext;
 import states.SecurityState;
 import states.breach.BreachNotReady;
 
+/**
+ * Represents the Stay state of the Security System.
+ *
+ */
 public class ArmedStay extends SecurityState {
 	private static ArmedStay instance;
 
@@ -46,7 +50,6 @@ public class ArmedStay extends SecurityState {
 
 	@Override
 	public void leave() {
-		// TODO Auto-generated method stub
 
 	}
 }

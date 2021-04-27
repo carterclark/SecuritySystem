@@ -7,9 +7,20 @@ import states.SecurityState;
 import states.breach.CountdownToBreachNotReady;
 import states.breach.CountdownToBreachReady;
 
+/**
+ * Represents the armed away state
+ * 
+ * @author Ben Hines, Carter Clark, Chris Lara-Batencourt, Pavel Danek, Ricky
+ *         Nguyen
+ */
 public class ArmedAway extends SecurityState {
 	private static ArmedAway instance;
 
+	/**
+	 * For singleton
+	 * 
+	 * @return the object
+	 */
 	public static ArmedAway instance() {
 		if (instance == null) {
 			instance = new ArmedAway();
@@ -23,6 +34,7 @@ public class ArmedAway extends SecurityState {
 	 */
 	@Override
 	public void handleEvent(PressMotion event) {
+		CountdownToBreachReady.instance().startTimer();
 		SecurityContext.instance().changeState(CountdownToBreachReady.instance());
 	}
 
@@ -32,6 +44,7 @@ public class ArmedAway extends SecurityState {
 	 */
 	@Override
 	public void handleEvent(UncheckZone event) {
+		CountdownToBreachNotReady.instance().startTimer();
 		SecurityContext.instance().changeState(CountdownToBreachNotReady.instance());
 	}
 
@@ -47,7 +60,6 @@ public class ArmedAway extends SecurityState {
 
 	@Override
 	public void leave() {
-		// TODO Auto-generated method stub
-
+		SecurityContext.instance().clearPassword();
 	}
 }
