@@ -1,7 +1,7 @@
 package events;
 
 /**
- * The class PressAway is invoked when the Motion Detector button is pressed.
+ * The class PressMotion is invoked when the Motion Detector button is pressed.
  * 
  * @author Ben Hines, Carter Clark, Chris Lara-Batencourt, Pavel Danek, Ricky
  *         Nguyen

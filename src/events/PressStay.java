@@ -1,11 +1,11 @@
 package events;
 
 /**
- * The class PressAway is invoked when stay button is pressed.
+ * The class PressStay is invoked when the Stay button is pressed.
  * 
  * @author Ben Hines, Carter Clark, Chris Lara-Batencourt, Pavel Danek, Ricky
  *         Nguyen
- * 
+ *
  */
 public class PressStay extends SecurityEvent {
 	private static PressStay instance;
@@ -17,7 +17,7 @@ public class PressStay extends SecurityEvent {
 	/**
 	 * Creates a new instance of the PressStay() object.
 	 * 
-	 * @return instance returns the instance of PressMotion
+	 * @return instance returns the instance of PressStay
 	 */
 	public static PressStay instance() {
 		if (instance == null) {

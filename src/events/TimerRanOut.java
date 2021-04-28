@@ -1,13 +1,12 @@
 package events;
 
 /**
- * The timer ran out is invoked when the timer reaches zero.
+ * The class TimerRanOut is invoked when the Time runs out.
  * 
  * @author Ben Hines, Carter Clark, Chris Lara-Batencourt, Pavel Danek, Ricky
  *         Nguyen
  *
  */
-
 public class TimerRanOut extends SecurityEvent {
 	private static TimerRanOut timerRanOut;
 
