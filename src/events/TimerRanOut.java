@@ -19,6 +19,11 @@ public class TimerRanOut extends SecurityEvent {
 
 	}
 
+	/**
+	 * Creates a new instance of the TimerRanOut() object.
+	 * 
+	 * @return instance returns the instance of TimerRanOut
+	 */
 	public static TimerRanOut instance() {
 		if (timerRanOut == null) {
 			timerRanOut = new TimerRanOut();

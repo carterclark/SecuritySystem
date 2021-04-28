@@ -1,5 +1,17 @@
 /states/
+<<<<<<< HEAD
+<<<<<<< HEAD
+/events/
+/display/
+=======
+>>>>>>> main
+/application/
+/buttons/
+/zones/
+/timer/
+=======
 /events/
 /buttons/
 /display/
 /zones/
+>>>>>>> upstream/main
