@@ -16,7 +16,8 @@ public class PressMotion extends SecurityEvent {
 
 	/**
 	 * Creates a new instance of the PressMotion() object.
-	 * @return instance    returns the instance of PressMotion
+	 * 
+	 * @return instance returns the instance of PressMotion
 	 */
 	public static PressMotion instance() {
 		if (instance == null) {
